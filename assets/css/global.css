@@ -1,24 +1,63 @@
-* {
+*{
     font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+    box-sizing: border-box; /*CONSIDERAR A BORDA COM TAMANHO TOTAL*/
 }
 
-body {
-    background-color: #f6f8fc;
+body{
+    background-color: #f6f8fc ;
 }
 
-.content {
+.content{
+    height: 100vh; /*TAMANHO DA TELA INTEIRA*/
     width: 100vw;
-    height: 100vh;
-    padding: 1rem;
+    padding: 1rem; /*1rem, deixa a fonte mais flexivel dependendo do tamanho da tela*/
     background-color: #fff;
+    background-image: url('https://www.jeitodegente.com.br/wp-content/uploads/2018/03/imagens-fundo-banner-site-03.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: auto;
+    background-size:auto;
+
 }
 
+.main-title {
+    padding: 1rem;
+    font-size: 3rem;
+    font-weight: 600;
+    background-image: black;
+    color: white;
+    background-clip: text;
+}
+
+.main-title:hover {
+    background-image: linear-gradient(to left, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
+    color: transparent;
+    background-clip: text;
+    -webkit-text-stroke: 1.5px #000;
+    -webkit-background-clip: text;
+    -o-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+/* ABAIXO,É USADO PARA LIMITAÇÃO DO TAMANHO, PARA NAO BAGUNÇAR AS IMAGENS */
 @media screen and (min-width: 992px) {
-    .content {
+    .content{
         max-width: 992px;
         height: auto;
         margin: 1rem auto;
         border-radius: 1rem;
     }
+}
+
+.content h1{
+    margin: 0;
+}
+
+
+li button {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
 }
